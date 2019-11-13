@@ -1,7 +1,3 @@
-# C++ Text Table
-Format text in tabular form: example:
-
-```C++
 #include "base/text_table.h"
 #include <iostream>
 
@@ -63,40 +59,3 @@ int main() {
   printMySqlStyle();
   return 0;
 }
-
-```
-
-### deploy exmaple
-
-```shell script
-> mkdir build
-> cd build
-> cmake ..
-> make 
-> ./text_table_test
-
-```
-expected output:
-
-```shell script
-===============Normal style ==============
-+-------+----------+----+
-|Field  |Type      |NULL|
-+-------+----------+----+
-|column1|kInt32    |No  |
-+-------+----------+----+
-|column2|kInt64    |YES |
-+-------+----------+----+
-|ts     |kTimestamp|YES |
-+-------+----------+----+
-
-===============Mysql style ==============
-+---------+------------+------+
-| Field   | Type       | NULL |
-+---------+------------+------+
-| column1 | kInt32     | No   |
-| column2 | kInt64     | YES  |
-| ts      | kTimestamp | YES  |
-+---------+------------+------+
-```
-
